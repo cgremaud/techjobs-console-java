@@ -125,5 +125,19 @@ public class JobData {
             e.printStackTrace();
         }
     }
+    public static ArrayList<HashMap<String, String>> findByValue(String searchTerm) {
+        loadData();
+        ArrayList<HashMap<String,String>> results = new ArrayList<>();
+        for (HashMap<String, String> job : allJobs) {
+            //this kinda works but you have to have the EXACT RIGHT value to return the job. So I need something else.
+//           System.out.println(job);
+            if (job.containsValue(searchTerm)) {
+                results.add(job);
+                System.out.println(job);
+            }
+        }
+        ;
+        return results;
+    }
 
 }
