@@ -34,9 +34,10 @@ public class JobData {
         loadData();
 
         ArrayList<String> values = new ArrayList<>();
-
+        //this line loops through all of the entries in allJobs, which are HashMaps, so row.get(field) returns the whole thing as a string?
+        //like "name: whatever, position: blah, etc.?
         for (HashMap<String, String> row : allJobs) {
-            String aValue = row.get(field);
+            String aValue = row.get(field);  //what does this line do?
 
             if (!values.contains(aValue)) {
                 values.add(aValue);
