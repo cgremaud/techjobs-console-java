@@ -135,7 +135,7 @@ public class JobData {
                 }
             }
         }
-        ;
+
         return results;
     }
 }
